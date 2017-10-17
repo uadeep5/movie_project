@@ -91,7 +91,7 @@
 <div style="width: 100%; background-color: #cacaca">
     <div style="width: 1100px; margin-right: auto; margin-left: auto">
     <br><h5>Other movie</h5><br>
-    <div style="overflow: auto; height: 575px">
+    <div>
         <c:forEach items="${all}" var="mov">
             <div style="width: 176px; display:inline-block; padding-bottom: 5px; text-align: center">
                 <a href="/movie/${mov.id}">

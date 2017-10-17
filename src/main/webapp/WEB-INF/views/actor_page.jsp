@@ -36,20 +36,26 @@
     </div>
 </nav>
 
-<div style="width: 1100px; margin-right: auto; margin-left: auto; padding: 0 10px;">
+<div style="width: 1100px; margin-right: auto; margin-left: auto; padding: 20px 10px;">
 <table>
     <tr>
-        <td><img src="/image/${actor.image.id}" width="200px" height="300px"></td>
-        <td>${actor.name}<br>
-            ${actor.birthdayDate}
-        </td>
+        <td><img src="/image/${actor.image.id}" width="177px"></td>
+        <td style="padding-left: 10px"><h2>${actor.name}</h2><br>
+            <h5><b>Country:</b> ${actor.country}</h5><br>
+            <h5><b>Date of birth:</b> ${actor.birthdayDate}</h5>
 
+        </td>
     </tr>
 </table>
     <hr>
     <div>
-        <c:forEach items="${actor.movies}" var="m">
-            ${m.name}<br>
+        <h5><b>Actor movies</b></h5><br>
+        <c:forEach items="${actor.movies}" var="mov">
+            <div style="width: 176px; display:inline-block; padding-bottom: 5px; text-align: center">
+                <a href="/movie/${mov.id}">
+                    <img width="170px" height="250px" src="/image/${mov.image.id}"></a><br>
+                <a href="/movie/${mov.id}"><b>${mov.name}</b></a>
+            </div>
         </c:forEach>
     </div>
 </div>
